@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+ body{
+    background-color: rgb(246, 240, 240);
+    text-align: center;
+ }
+ #button{
+    
+    display: flex;
+flex-direction: row;
+width: auto;
+padding:60px;
+ }
+ #counter{
+    width:400px;
+    height: 400px;
+    margin-left: 500px;
+    border: 1px solid rgb(27, 25, 25);
+    margin-top: 200px;
+    background-color: rgb(201, 203, 204);
+
+ }
+ .btn{
+    width: fit-content;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: white;
+    border: 2px solid black;
+ }
+ .btn:hover{
+    background-color: tomato;
+    border-radius: 40%;
+    border-style: hidden;
+    
+ }
+ #timer{
+    width: auto;
+    height: auto;
+    font-size: 100px;
+ }
+    </style>
+</head>
+<body >
+    <div id="counter">
+
+        <h1 >counter</h1>
+        <div id="timer"></div>
+        <div id="button">
+            <button id="decrease" style="margin: 10px;" class="btn">DECREASE</button>
+ <button id="reset" style="margin: 10px;" class="btn">RESET</button>
+ <button id="increase"  style="margin: 10px ;" class="btn">INCREASE</button>
+        </div>
+    </div>
+    <script>
+        const decrease = document.getElementById('decrease')
+        const reset = document.getElementById('reset')
+        const increase = document.getElementById('increase')
+        decrease.addEventListener('click',dec)
+        increase.addEventListener('click',inc)
+        reset.addEventListener('click',rese)
+        const timer = document.getElementById('timer')
+        let time =0 ;
+        timer.textContent = time
+        function inc(e) {
+            time++;
+            timer.textContent = time
+        }
+        function dec(e) {
+            if(time>0)
+            {
+            time--;
+            timer.textContent = time
+            }
+        }
+        function rese(e) {
+            time = 0;
+            timer.textContent = time
+        }
+        
+    </script>
+</body>
+</html>
