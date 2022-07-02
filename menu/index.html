@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>OUR MENU</h1>
+    <div class="line"></div>
+    <div id="list" class="list-1">
+        <div class="item" id="all">All</div>
+        <div class="item" id="breakfast">Breakfast</div>
+        <div class="item" id="lunch">Lunch</div>
+        <div class="item" id="shake">Shakes</div>
+        <div class="item"  id="dinner">Dinner</div>
+    </div>
+    <div id="container" class="container-1">
+            <div class="list-item " id="allItem">
+                <img src="./img/cake.jpg" alt="" id="image">
+                <h2 id="name">Butter Pancake</h2>
+                <h3 id="price">$40</h3>
+                <p id="dis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!</p>
+            </div>
+            
+            <div class="list-item " id="allItem">
+                <img src="./img/cake.jpg" alt="">
+            </div>
+            
+    </div>
+    <script>
+        const all = document.getElementById('all')
+        const breakfast = document.getElementById('breakfast')
+        const lunch = document.getElementById('lunch')
+        const shake = document.getElementById('shake')
+        const dinner = document.getElementById('dinner')
+        let image =document.getElementById('image')
+        let name = document.getElementById('name')
+        let price = document.getElementById('price')
+        let disc = doccument.getElementById('dis')
+
+
+        let allArray = [{img:'./img/cake.jpg',
+          names:'Butter Pancake',
+        prices:'$40',
+        ctg:'breakfast',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    },
+    {img:'./img/burger.jpg',
+          names:'Burger',
+        prices:'$20',
+        ctg:'breakfast',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    },
+    {img:'./img/chicken.jpg',
+          names:'Butter Chicken',
+        prices:'$80',
+        ctg:'lunch',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    },
+    {img:'./img/chow.jpg',
+          names:'Chowmein',
+        prices:'$60',
+        ctg:'dinner',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    },
+    {img:'./img/idli.jpg',
+          names:'Idli',
+        prices:'$10',
+        ctg:'lunch',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    },
+    {img:'./img/mango.jpg',
+          names:'Mango Shake',
+        prices:'$15',
+        ctg:'shake',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    },
+    {img:'./img/oreoo.jpg',
+          names:'Oreo Shake',
+        prices:'$20',
+        ctg:'shake',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    },
+    {img:'./img/download.jpg',
+          names:'Fish',
+        prices:'$40',
+        ctg:'lunch',
+        dis:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe quia aperiam temporibus quae enim! Omnis, est voluptatem totam quo quis blanditiis fugiat iusto praesentium aut atque debitis, ea consequatur.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos quis consectetur aliquid enim non voluptates et. Nobis temporibus, saepe esse voluptate provident reprehenderit laudantium expedita delectus ducimus voluptatum placeat!'
+    }
+]
+
+all.addEventListener('click',allItem)
+function allItem(e) {
+    let c=1;
+    
+}
+    </script>
+</body>
+</html>
